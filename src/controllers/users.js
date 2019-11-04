@@ -1,5 +1,3 @@
-const User = require("../models/User");
-const Address = require("../models/Address");
 const errors = require("../utils/errors");
 const usersService = require("../services/users");
 
