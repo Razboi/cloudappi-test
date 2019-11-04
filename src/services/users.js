@@ -52,7 +52,7 @@ module.exports = {
 			user.name = newUserData.name;
 			user.email = newUserData.email;
 			user.birthDate = newUserData.birthDate;
-			user.save();
+			await user.save();
 
 		} catch (error) {
 			throw new Error(error.message);
@@ -67,7 +67,7 @@ module.exports = {
 			userAddress.city = newAddressData.city;
 			userAddress.country = newAddressData.country;
 			userAddress.zip = newAddressData.zip;
-			userAddress.save();
+			await userAddress.save();
 
 		} catch (error) {
 			throw new Error(error.message);

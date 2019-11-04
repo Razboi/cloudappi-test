@@ -57,9 +57,9 @@ module.exports = {
 				return next(errors.userNotFound());
 			}
 			if (newUserData) {
-				usersService.updateUser(user, newUserData);
+				await usersService.updateUser(user, newUserData);
 				if (newUserData.address) {
-					usersService.updateAddress(user.address, newUserData.address);
+					await usersService.updateAddress(user.address, newUserData.address);
 					user.address = newUserData.address;
 				}
 			}
