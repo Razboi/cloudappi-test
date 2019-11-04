@@ -60,6 +60,7 @@ module.exports = {
 				usersService.updateUser(user, newUserData);
 				if (newUserData.address) {
 					usersService.updateAddress(user.address, newUserData.address);
+					user.address = newUserData.address;
 				}
 			}
 			res.send(user);
